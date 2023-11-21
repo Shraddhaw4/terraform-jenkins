@@ -8,7 +8,7 @@ pipeline {
           AWS_SECRET_ACCESS_KEY = credentials('AWS_credentials')
     }
 
-   agent  any
+   agent {label 'terraform'}
     stages {
         stage('checkout') {
             steps {
